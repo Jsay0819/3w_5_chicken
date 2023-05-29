@@ -1,0 +1,320 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: "GangwonEduPowerExtraBoldA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0 auto;
+  padding: 0;
+  color: rgb(41, 39, 39);
+  text-decoration: none;
+  list-style: none;
+}
+
+#wrap {
+  width: 1000px;
+  height: 650px;
+  background-color: rgb(241, 238, 233);
+}
+
+/* 왼쪽 바 */
+.left {
+  width: 200px;
+  height: 650px;
+  /* background-color: aqua; */
+  float: left;
+}
+.left .logo {
+  font-family: ;
+  width: 200px;
+  height: 100px;
+  /* background-color: aliceblue; */
+  text-align: center;
+  display: inline-block;
+  font-size: 30px;
+  line-height: 100px;
+  font-weight: 600;
+  font-family: "GangwonEduPowerExtraBoldA";
+}
+
+/* 메뉴 */
+.left .menu {
+  width: 200px;
+  height: 250px;
+  /* background-color: rgb(25, 26, 27); */
+  z-index: 1;
+  position: relative;
+}
+.menu ul {
+  position: absolute;
+}
+.menu li {
+  float: left;
+  width: 200px;
+  height: 50px;
+  background-color: rgb(24, 26, 24);
+  position: relative;
+  text-align: center;
+}
+.menu li a {
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: aliceblue;
+}
+.menu li:hover a {
+  color: rgb(240, 167, 31);
+}
+.submenu li {
+  background-color: rgb(240, 167, 31);
+}
+
+.menu li:hover .submenu a {
+  color: aliceblue;
+}
+
+.menu li:hover .submenu {
+  display: block;
+}
+.submenu li:hover {
+  background-color: #3a3a3a;
+}
+
+.submenu {
+  width: 200px;
+  height: 150px;
+  /* background-color: rgb(68, 82, 82); */
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 200px;
+}
+
+
+/* 메인 */
+.main {
+  width: 800px;
+  height: 650px;
+  /* background-color: rgb(163, 163, 163); */
+  float: left;
+}
+/* img {
+  vertical-align: middle;
+} */
+.main .say {
+  /* background-color: aqua; */
+  width: 800px;
+  height: 350px;
+  overflow: hidden;
+  /* position: relative; (필요X)*/
+}
+
+/* 이미지 슬라이드 */
+.imageslide {
+  /* 이미지800의 3배 (사진3장) */
+  width: 2400px;
+  height: 350px;
+  /* background-color: coral; */
+  animation: scroll 10s infinite;
+}
+.main img {
+  width: 800px;
+  height: 350px;
+}
+
+.imageslide li {
+  width: 800px;
+  height: 350px;
+  float: left;
+  position: relative;
+}
+
+@keyframes scroll {
+  0% {
+    margin-left: 0px;
+  }
+  10% {
+    margin-left: 0px;
+  }
+
+  20% {
+    margin-left: 0px;
+  }
+  30% {
+    margin-left: -800px;
+  }
+  40% {
+    margin-left: -800px;
+  }
+  50% {
+    margin-left: -800px;
+  }
+  60% {
+    margin-left: -1600px;
+  }
+  70% {
+    margin-left: -1600px;
+  }
+  80% {
+    margin-left: -1600px;
+  }
+  100% {
+    margin-left: 0px;
+  }
+}
+
+.imageslide ul li a {
+  width: 800px;
+  float: left;
+  margin-left: 0;
+}
+
+.imageslide span {
+  width: 400px;
+  height: 50px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 50px;
+  font-weight: bold;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgb(255, 255, 255);
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main .middle {
+  width: 800px;
+  height: 200px;
+  background-color: rgb(255, 255, 255);
+}
+
+/* 공지사항 */
+.tab {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px;
+  font-family: "GangwonEduPowerExtraBoldA";
+}
+
+.info {
+  width: 300px;
+  height: 200px;
+  background-color: rgb(255, 255, 255);
+  float: left;
+}
+.info > div {
+  width: 280px;
+  border-bottom: 3px solid #ffb121;
+}
+.info li {
+  line-height: 30px;
+}
+.info li a {
+  margin: 20px;
+}
+.info li:nth-child(2n) {
+  background-color: rgb(255, 184, 78);
+}
+
+.info li span {
+  float: right;
+  margin-right: 18px;
+}
+
+/* 갤러리 */
+.gallery {
+  width: 300px;
+  height: 200px;
+  /* background-color: blanchedalmond; */
+  float: left;
+}
+.gallery > div {
+  border-bottom: 3px solid #ffb121;
+}
+.gallery img {
+  width: 95px;
+  height: 115px;
+  float: left;
+  margin: 2px;
+}
+
+/* 바로가기 */
+.baro {
+  width: 200px;
+  height: 200px;
+  background-color: lawngreen;
+  float: left;
+  position: relative;
+}
+.baro img {
+  width: 100%;
+  height: 100%;
+}
+.brtext {
+  width: 110px;
+  height: 30px;
+  line-height: 37px;
+  text-align: center;
+  position: absolute;
+  top: 45%;
+  left: 20%;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: aliceblue;
+  font-weight: 600;
+  font-family: "GangwonEduPowerExtraBoldA";
+}
+
+/* 하단 */
+.main .footer {
+  width: 800px;
+  height: 100px;
+  /* background-color: darkorchid; */
+}
+.footerlogo {
+  width: 300px;
+  height: 100px;
+  /* background-color: #ffb121; */
+  float: left;
+  text-align: center;
+  display: inline-block;
+  font-size: 30px;
+  line-height: 100px;
+  font-weight: 700;
+  font-family: "GangwonEduPowerExtraBoldA";
+}
+/* 하단메뉴 */
+.footermenu {
+  /* background-color: aqua; */
+  width: 500px;
+  height: 50px;
+  float: left;
+  font-family: "GangwonEduPowerExtraBoldA";
+}
+.footer li {
+  float: left;
+  margin: 20px 30px;
+  line-height: 20px;
+  font-weight: 600;
+}
+.footermenu a:active{
+    color: #ffa600;
+}
+
+/* 카피 */
+.copy {
+  /* background-color: cadetblue; */
+  width: 500px;
+  height: 50px;
+  float: left;
+  line-height: 40px;
+  font-weight: 600;
+}
